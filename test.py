@@ -1,8 +1,5 @@
-from contextlib import nullcontext
 
+boy = input("how many boys are there? ")
+age = int(input("How old are they? "))
 
-num1 = 5
-print(num1)
-
-num1 = 10
-print(num1)
+print("The boys anttendance are {} and they are {} years old \n" .format(boy, age))
