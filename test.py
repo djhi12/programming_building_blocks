@@ -1,11 +1,8 @@
-from distutils.command.build_scripts import first_line_re
+from contextlib import nullcontext
 
 
-print()
+num1 = 5
+print(num1)
 
-first_num = 4
-second_num = 2
-
-print(f"asdasd aasdasd asd asdasd  {first_num ** second_num}")
-
-
+num1 = 10
+print(num1)
