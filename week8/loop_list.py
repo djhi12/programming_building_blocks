@@ -1,3 +1,6 @@
+from operator import le
+
+
 items = ["crayon", "scissors", "paper", "glitter glue", "markers", "pens"]
 for item in items:
     print(f"The item is: {item}")
@@ -25,6 +28,9 @@ first_name = "Brigham"
 for letter in first_name:
     print(f"The letter is: {letter}")
 
+    if letter == "m":
+        print(letter.upper())
+
 
 # -----------------------------
 
@@ -43,3 +49,13 @@ number_of_letters = 4
 for index in range(number_of_letters):
     letter = word[index]
     print(f"Index: {index}Letter: {letter}")
+
+
+
+# -----------------------------
+
+dog_name = input("What is your dog's name? ")
+letter_count = len(dog_name)
+print(f"Your dog's name has {letter_count}letters")
+
+
