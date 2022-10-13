@@ -1,53 +1,36 @@
-print()
-
-# Velocity Calculator
+# Grade Calculator
 """
-m = mass
-g = gravity
-t = time
-c = inner_value (1/2 p A C)
-p = fluid
-A = area
-C = constant
-
-Formula = v(t) = sqrt(mg/c) * (1 - exp((-sqrt(mgc)/m)t))
+ A >= 90 # Excellent!
+ B >= 80 # You passed!
+ C >= 70 # Good job!
+ D >= 60 # Study more!
+ F < 60 # Better luck nextime!
 """
+from signal import signal
 
-print("Welcome to the velocity calculator. Please enter the following: \n")
 
-import math
+letter = ""
 
-# m
-mass = float(input("Mass (in kg): "))
+grade = int(input("Type your grade: "))
+sign = grade % 10
 
-# g
-gravity = float(input("Gravity (in m/s^2, 9.8 for Earth, 24 for Jupiter): "))
+print(sign)
 
-# t
-time = float(input("Time (in seconds): "))
+if grade >= 90:
 
-# p
-fluid = float(input("Density of the fluid (in kg/m^3, 1.3 for air, 1000 for water): "))
+    letter = "A"
 
-# A
-area = float(input("Cross sectional area (in m^2): "))
+elif grade >= 80:
+    letter = "B"
+elif grade >= 70:
+    letter = "C"
+elif grade >= 60:
+    letter = "D"
+else:
+    letter = "F"
 
-# C
-constant = float(input("Drag constant (0.5 for sphere, 1.1 for cylinder): "))
-
-# c = 1/2 p A C
-inner_value = (1/2) * fluid * area * constant
-print(f"The inner value of c is: {inner_value:.3f}")
-
-# Velocity
-# Formula = v(t) = sqrt(mg/c) * (1 - exp((-sqrt(mgc)/m)t))
-velocity_time = math.sqrt((mass * gravity) / inner_value) * (1 - math.exp((-math.sqrt(mass * gravity * inner_value) / mass) * time))
-
-# Calculation
-print(f"The velocity after {time} seconds is: {velocity_time:.3f} m/s \n")
+print(f"{letter}")
 
 
 
-
-
-
+    
