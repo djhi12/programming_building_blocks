@@ -8,7 +8,7 @@ print()
 # Match
 if items.lower() == "match":
     run_walk_hide = input("You pick up the match and strike it, and for an instant, the forest around you is illuminated. You see a large grizzly bear, and then the match burns out. Do you want to RUN, WALK SLOWLY, or HIDE behind the tree? ")
-
+    print()
     # Run
     if run_walk_hide.lower() == "run":
         print("You have to run as fast as you could so that the bear cannot catch you. \n")
