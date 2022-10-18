@@ -11,7 +11,6 @@ list_items_price = []
 action = ""
 
 while action != 5:
-    # action = int(input("Please enter an action: "))
 
     if action == 1:
         item = input("What item would you like to add? ")
@@ -20,8 +19,7 @@ while action != 5:
         print()
         print(f"'{item}' has been added to the cart")
         print()
-        # action = int(input("Please enter an action: "))
-
+        
     elif action == 2:
         print("The contents of the shopping cart are:")
         for list_item in list_items:
