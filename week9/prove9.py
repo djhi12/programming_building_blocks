@@ -23,23 +23,21 @@ while action != 5:
         # action = int(input("Please enter an action: "))
 
     elif action == 2:
+        print("The contents of the shopping cart are:")
         for list_item in list_items:
             print(list_item)
         print()
-        # action = int(input("Please enter an action: "))
+    
+    elif action == 3:
+        print()
+
+    elif action == 4:
+        print()
+
     else:
         print("Please enter action from 1, 2, and 5.")
         print()
 
-    # elif action == 3:
-    #     print()
-
-    #     # action = int(input("Please enter an action: "))
-
-    # elif action == 4:
-    #     print()
-
-        # action = int(input("Please enter an action: "))
     print("Please select one of the following: \n1. Add item \n2. View cart \n3. Remove item \n4. Compute total \n5. Quit \n")
     action = int(input("Please enter an action: "))
     print()
