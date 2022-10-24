@@ -1,5 +1,5 @@
 from csv import list_dialects
-
+import math
 
 print()
 print("Welcome to the Shopping Cart Program! \n")
@@ -37,8 +37,9 @@ while action != 5:
         print()
 
     elif action == 4:
+        total_price = math.fsum(list_items_price)
+        print(f"The total price of the items in the shopping cart is {total_price}")
         print()
-
     else:
         print("Please enter action from 1, 2, and 5.")
         print()
