@@ -10,6 +10,7 @@ list_items_price = []
 
 action = None
 price = None
+item_remove = None
 
 while action != 5:
 
@@ -29,20 +30,25 @@ while action != 5:
         # for list_item in list_items:
         #     print(list_item)
         for i in range(len(list_items)):
-            print(f"{i}. {list_items[i]} - {list_items_price[i]}")
-        # for i, list_item in enumerate(list_items):
-        #     print(f"{i}. {list_item} - {list_items_price[i]}")
+            print(f"{i}. {list_items[i]} - ${list_items_price[i]}")
         print()
+
     elif action == 3:
+        item_remove = int(input("Which item would you like to remove? "))
+        # for list_item_remove in list_items:
+        #     if item_remove == list_item_remove:
+        #         list_items.remove(item_remove)
+        list_items.pop(item_remove)
+
+        print("Item removed.")
         print()
 
     elif action == 4:
         total_price = math.fsum(list_items_price)
-        print(f"The total price of the items in the shopping cart is {total_price}")
+        print(f"The total price of the items in the shopping cart is ${total_price}")
         print()
     else:
-        print("Please enter action from 1, 2, and 5.")
-        print()
+        print("Please type the correct number.")
 
     print("Please select one of the following: \n1. Add item \n2. View cart \n3. Remove item \n4. Compute total \n5. Quit \n")
     action = int(input("Please enter an action: "))
