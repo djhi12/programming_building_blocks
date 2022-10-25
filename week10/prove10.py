@@ -54,7 +54,7 @@ while action != 5:
     action = int(input("Please enter an action: "))
     print()
 
-print("Thank you, for shopping with us!")
+print("Thank you, for shopping with us! \n")
 
 
 
