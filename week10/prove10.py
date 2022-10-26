@@ -42,8 +42,9 @@ while action != 5:
     
         list_items.pop(item_remove)
 
-        print("Item removed.")
-        print()
+        print("Item removed. \n")
+        # Number of items
+        print(f"You have {len(list_items)} items left in your cart. \n")
 
     # Total items
     elif action == 4:
