@@ -14,6 +14,7 @@ item_remove = None
 
 while action != 5:
 
+    # Add item and price
     if action == 1:
         item = input("What item would you like to add? ")
         price = float(input(f"What is the price of '{item}'? "))
@@ -24,25 +25,27 @@ while action != 5:
         print(f"'{item}' has been added to the cart")
         print()
         
-
+    # Display items
     elif action == 2:
         print("The contents of the shopping cart are:")
-        # for list_item in list_items:
-        #     print(list_item)
+        
         for i in range(len(list_items)):
             print(f"{i}. {list_items[i]} - ${list_items_price[i]}")
         print()
 
+        # Number of items
+        print(f"You have {len(list_items)} items in your cart. \n")
+
+    # Remove item
     elif action == 3:
         item_remove = int(input("Which item would you like to remove? "))
-        # for list_item_remove in list_items:
-        #     if item_remove == list_item_remove:
-        #         list_items.remove(item_remove)
+    
         list_items.pop(item_remove)
 
         print("Item removed.")
         print()
 
+    # Total items
     elif action == 4:
         total_price = math.fsum(list_items_price)
         print(f"The total price of the items in the shopping cart is ${total_price}")
