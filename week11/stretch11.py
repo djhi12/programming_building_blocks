@@ -8,6 +8,7 @@ with open("hr.txt") as details:
         title = parts[2]
         id = parts[1]
         salary = parts[3]
+        
 
         print(f"{name.strip()} (ID: {id.strip()}), {title.strip()} - ${salary.strip()}")
     print()
