@@ -1,7 +1,7 @@
-with open("BOM.txt") as scriptures:
+print()
+
+with open("bom.txt") as scriptures:
     for book in scriptures:
-        print(book)
-
-    print("Awesome!")
-
-print("Done!")
+        book_clean = book.strip()
+        print(book_clean)
+print()
