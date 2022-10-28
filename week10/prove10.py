@@ -28,9 +28,11 @@ while action != 5:
     # Display items
     elif action == 2:
         print("The contents of the shopping cart are:")
-        
+    
         for i in range(len(list_items)):
-            print(f"{i}. {list_items[i]} - ${list_items_price[i]}")
+            print(f"{i}. {list_items[i]} - ${'%0.2f' % list_items_price[i]}")
+        # for i, list_item in enumerate(list_items):
+        #     print(f"{i}. {list_item[i]}")
         print()
 
         # Number of items
@@ -41,6 +43,7 @@ while action != 5:
         item_remove = int(input("Which item would you like to remove? "))
     
         list_items.pop(item_remove)
+        # list_items.remove(item_remove)
 
         print("Item removed. \n")
         # Number of items
@@ -49,7 +52,7 @@ while action != 5:
     # Total items
     elif action == 4:
         total_price = math.fsum(list_items_price)
-        print(f"The total price of the items in the shopping cart is ${total_price}")
+        print(f"The total price of the items in the shopping cart is ${format(total_price, '.2f')}")
         print()
     else:
         print("Please type the correct number.")
