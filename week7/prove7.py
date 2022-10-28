@@ -28,3 +28,38 @@ while keep_playing == "yes":
     keep_playing = input("Would you like to play again (yes/no)? ")
 
 print("Thank you for playing. Goodbye. \n")
+
+
+
+
+# secret_word = "lehi"
+# guess = None
+# attempts = 0
+
+# while secret_word != guess:
+#     attempts += 1
+#     guess = input("What is your guess? ")
+
+#     if secret_word != guess:
+#         print("Try again")
+#     else:
+#         print(f"You guessed it right! Total number of guessed is {attempts} \n")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
