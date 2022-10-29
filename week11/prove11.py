@@ -1,5 +1,5 @@
 print()
-
+# Entity, Code, Year, Life expectancy
 # Variables
 year = None
 
