@@ -29,7 +29,7 @@ while action != 5:
     elif action == 2:
         print("The contents of the shopping cart are:")
     
-        for i in range(len(list_items)):
+        for i in range(1, len(list_items)):
             print(f"{i}. {list_items[i]} - ${'%0.2f' % list_items_price[i]}")
         # for i, list_item in enumerate(list_items):
         #     print(f"{i}. {list_item[i]}")
@@ -54,8 +54,6 @@ while action != 5:
         total_price = math.fsum(list_items_price)
         print(f"The total price of the items in the shopping cart is ${format(total_price, '.2f')}")
         print()
-    else:
-        print("Please type the correct number.")
 
     print("Please select one of the following: \n1. Add item \n2. View cart \n3. Remove item \n4. Compute total \n5. Quit \n")
     action = int(input("Please enter an action: "))
