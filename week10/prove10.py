@@ -29,11 +29,13 @@ while action != 5:
     elif action == 2:
         print("The contents of the shopping cart are:")
     
-        for i in range(1, len(list_items)):
-            print(f"{i}. {list_items[i]} - ${'%0.2f' % list_items_price[i]}")
+        # for i in range(1, len(list_items)):
+        #     print(f"{i}. {list_items[i]} - ${'%0.2f' % list_items_price[i]}")
         # for i, list_item in enumerate(list_items):
         #     print(f"{i}. {list_item[i]}")
-        print()
+        for i in range(len(list_items)):
+            
+            print(f"{i+1}. {list_items[i]} - ${'%0.2f' % list_items_price[i]}")
 
         # Number of items
         print(f"You have {len(list_items)} items in your cart. \n")
