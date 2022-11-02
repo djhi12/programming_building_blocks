@@ -1,36 +1,55 @@
 print()
 # Entity, Code, Year, Life expectancy
 # Variables
-year = None
-i = 0
+# year = None
+
 
 with open("life-expectancy.csv") as life_expectancies:
+    # Highest
+    highest = 86
+    highest_country = ""
+    highest_year = 0
+    
+    # Lowest
+    lowest = 1000
+    lowest_country = ""
+    lowest_year = 0
+    
+    # Average
+    from statistics import mean 
+    average = 43
+    average_country = ""
+    average_year = 0
+
+    
+    i = 0
     for life in life_expectancies:
         i += 1
         life_details = life.strip()
         life_detail_clean = life_details.split(",")
-        # print(life_details_clean)
 
-        # for i in range(len(life_details)):
-        #     print(i)
-        
-        # entity
-        entity = life_detail_clean[0]
-        print(entity)
+        if i > 1:
+            # highest country/year
+            if highest < float(life_detail_clean[3]):
+                highest = float(life_detail_clean[3])
+                highest_year = life_detail_clean[2]
+                highest_country = life_detail_clean[0]
 
-        # code
-        code = life_detail_clean[1]
+                print(f"{highest} - {highest_year} - {highest_country}")
+                
+            # Lowest country/year
+            elif lowest > float(life_detail_clean[3]):
+                lowest = float(life_detail_clean[3])
+                lowest_year = life_detail_clean[2]
+                lowest_country = life_detail_clean[0]
 
-        # year
-        year = life_detail_clean[2]
+                print(f"{lowest} - {lowest_year} - {lowest_country}")
+                
+            # Average country/year
+            elif average == float(life_detail_clean[3]):
+                average = mean(life_detail_clean[3])
+                
+                
+                
 
-        # life expectancy
-        life_expectancy = life_detail_clean[3]
-        
-
-
-       
-
-
-
-
+          
