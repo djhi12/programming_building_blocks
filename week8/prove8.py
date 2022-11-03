@@ -22,37 +22,25 @@ guess_count = 1
 play_again = "yes"
 
 while play_again.lower() == "yes":
-    guess = input("What is your guess? ")
+    guess = ""
+    
     while guess != word:
         guess_length = len(guess)
         word_length = len(word)
 
-        # if guess_length >= word_length:
-        #     print("Sorry, the guess must have the same number of letters as the ")
-
-        # elif guess_length >= word_length:
-        #     print("Sorry, the guess must have the same number of letters as the ")
-
         for i in range(guess_length):
+            #
             letter = guess[i]
 
             if letter == word[i]:
                 print(f"{letter.upper()}", end="")
 
-                # if len(letter) != len(word[i]):
-                #     print("Sorry, the guess must have the same number of letters as the ")
-
             elif letter in word:
                 print(f"{letter.lower()}", end="")
                 # print(len(letter))
 
-            # elif len(guess) <= len(word):
-            #     print("Sorry, the guess must have the same number of letters as the ")
         
-            # elif len(guess) >= len(word):
-            #     print("Sorry, the guess must have the same number of letters as the ")
-
-        guess = input("What is your guess? ")
+        guess = input("\n\nWhat is your guess? ")
         guess_count += 1
 
     print(f"You guessed it in {guess_count} guesses!")

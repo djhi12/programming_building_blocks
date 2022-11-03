@@ -1,18 +1,13 @@
-print()
-print("Welcome to the word guessing game! \n")
+word = "dog"
 
-name = "daniel"
-print("Your hint is: ", end="")
-for letter_name in name:
-    hint = letter_name.replace(letter_name, "_")
-    print(hint, end="")
-
-print()
 guess = input("What is your guess? ")
 
-if letter_name == guess:
-    print("Awesome!")
-
+for i in range(len(word)):
+    letter_word = word[i]
+    letter_guess = guess[i]
     
-
-    
+    if letter_word == letter_guess:
+        print(letter_guess.upper(), end="")
+        
+    else:
+        print(letter_guess.replace(letter_guess, " _"), end="")
