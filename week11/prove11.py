@@ -16,7 +16,7 @@ with open("life-expectancy.csv") as life_expectancies:
     lowest_year = 0
     
     # Average
-    from statistics import mean 
+    # from statistics import mean 
     average = 43
     average_country = ""
     average_year = 0
@@ -35,7 +35,7 @@ with open("life-expectancy.csv") as life_expectancies:
                 highest_year = life_detail_clean[2]
                 highest_country = life_detail_clean[0]
 
-                print(f"{highest} - {highest_year} - {highest_country}")
+                print(f"Highest {highest} - {highest_year} - {highest_country}")
                 
             # Lowest country/year
             elif lowest > float(life_detail_clean[3]):
@@ -43,11 +43,15 @@ with open("life-expectancy.csv") as life_expectancies:
                 lowest_year = life_detail_clean[2]
                 lowest_country = life_detail_clean[0]
 
-                print(f"{lowest} - {lowest_year} - {lowest_country}")
+                print(f"Lowest {lowest} - {lowest_year} - {lowest_country}")
                 
-            # Average country/year
+            #Average country/year
             elif average == float(life_detail_clean[3]):
-                average = mean(life_detail_clean[3])
+                average =float(life_detail_clean[3])
+                average_year = life_detail_clean[2]
+                average_country = life_detail_clean[0]
+                
+                print(f"Average {average} - {average_year} - {average_country}")
                 
                 
                 
