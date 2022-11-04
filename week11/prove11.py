@@ -36,7 +36,7 @@ with open("life-expectancy.csv") as life_expectancies:
                 highest_country = life_detail_clean[0]
 
                 print(f"Highest {highest} - {highest_year} - {highest_country}")
-                
+         
             # Lowest country/year
             elif lowest > float(life_detail_clean[3]):
                 lowest = float(life_detail_clean[3])
