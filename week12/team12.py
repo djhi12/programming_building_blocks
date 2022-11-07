@@ -19,7 +19,7 @@ with open("scriptures12.txt") as scriptures:
             scripture_largest_num_book = scripture_split[0]
             
             if scripture_largest_num == 150:
-                print(f"The {scripture_largest_num_book} has the largest scripture verse {scripture_largest_num}.")
+                print(f"The {scripture_largest_num_book} has the largest scripture verses it has {scripture_largest_num}.")
     
     
         
