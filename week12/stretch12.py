@@ -1,5 +1,8 @@
 print()
 
+largest_chap = 0
+
+
 with open("scriptures12.txt") as scriptures:
     for scripture in scriptures:
         scripture_strip = scripture.strip() # Remove extra spaces
@@ -13,7 +16,19 @@ with open("scriptures12.txt") as scriptures:
             book_of_mormon_chap = int(scripture_split[1])
             
             if books_of_mormon == "Book of Mormon":
-                 print(books_of_mormon)
+                #  print(books_of_mormon)
+                 
+                 if book_of_mormon_chap > largest_chap:
+                     largest_chap = book_of_mormon_chap
+                     
+                     print(f"{scripture_split[0]} - {scripture_split[1]}")
+                     
+                 
+                 
+                 
+                 
+                 
+                 
                 
             
         
