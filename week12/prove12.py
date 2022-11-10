@@ -32,6 +32,9 @@ while inquire == "yes":
                     
                     print(f"{country_name} - {country_largest}")
                     
+                    
+        else:
+            print("Type the proper name of the country.")
                
         
         # 
