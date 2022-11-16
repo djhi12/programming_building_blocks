@@ -40,12 +40,16 @@ while action != 5:
     elif action == 3:
         item_remove = int(input("Which item would you like to remove? "))
     
-        list_items.pop(item_remove)
-        # list_items.remove(item_remove)
+        # list_items.pop(item_remove)
+        # # list_items.remove(item_remove)
 
-        print("Item removed. \n")
-        # Number of items
-        print(f"You have {len(list_items)} items left in your cart. \n")
+        # print("Item removed. \n")
+        # # Number of items
+        # print(f"You have {len(list_items)} items left in your cart. \n")
+        
+        del list_items[item_remove]
+        print(list_items)
+        print(list_items_price)
 
     # Total items
     elif action == 4:
