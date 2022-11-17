@@ -48,8 +48,9 @@ while action != 5:
         # print(f"You have {len(list_items)} items left in your cart. \n")
         
         del list_items[item_remove]
-        print(list_items)
-        print(list_items_price)
+        del list_items_price[item_remove]
+        print(f"You removed '{list_items[item_remove]}' from the shopping cart.")
+        print(f"You have {len(list_items)} items left in your cart. \n")
 
     # Total items
     elif action == 4:
