@@ -76,12 +76,12 @@ with open("../week11/life-expectancy.csv") as life_expectancies:
                     # if details_split_float < min_life_expectancy:
                     #     min_life_expectancy = details_split_float
                         
-                    #     print(f"The overall max life expectancy is: {min_life_expectancy} from {details_split[0]} in {details_split_year}")
+                    #     print(f"The overall min life expectancy is: {min_life_expectancy} from {details_split[0]} in {details_split_year}")
                     
-                # elif details_split_float < min_life_expectancy:
-                #     min_life_expectancy = details_split_float
+                elif details_split_float < min_life_expectancy:
+                    min_life_expectancy = details_split_float
                     
-                #     # print(f"The overall max life expectancy is: {max_life_expectancy} from {details_split[0]} in {details_split_year}")
+                    print(f"The overall min life expectancy is: {max_life_expectancy} from {details_split[0]} in {details_split_year}")
             
                 #     if details_split_float < max_life_expectancy:
                 #         max_life_expectancy = details_split_float
