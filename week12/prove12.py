@@ -56,6 +56,7 @@ while inquire == "yes":
             if i > 1:
                 details_split_float = float(details_split[3])
                 details_split_year = int(details_split[2])
+                # print(details_split_year)
                 
                 if details_split_year == year_of_interest:
                     
@@ -66,6 +67,8 @@ while inquire == "yes":
                         
                     elif details_split_float < min_life_expectancy:
                         min_life_expectancy = details_split_float
+                        # average_life_ecpectancy = average_life_ecpectancy + details_split_float
+                        # average_life_ecpectancy = average_life_ecpectancy / details_split_year
                         
             # Highest
             if country.title() == details_split[0] and country_expectancy.lower() == "largest":
