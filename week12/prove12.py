@@ -35,23 +35,16 @@ with open("../week11/life-expectancy.csv") as life_expectancies:
                     min_life_all_exp = life_exp
                     min_life_all = country
                     
-                
                 if year_of_interest == year:
                      
-                    
-                    
                     if life_exp > max_life_exp:
                         max_life_exp = life_exp
-                        max_life_country = country
-                        
-                        # print(f"{max_life_all} - {max_life_exp}")
-                    
+                        max_life_country = country  
                     
                     if life_exp < min_life_exp:
                         min_life_exp = life_exp
                         min_life_country = country
                  
-
 
 print(f"The overall max life expectancy is: {max_life_all_exp} from {max_life_all} in {year}")
 print(f"The overall min life expectancy is: {min_life_all_exp} from {min_life_all} in {year} \n")
