@@ -38,6 +38,11 @@ with open("../week11/life-expectancy.csv") as life_expectancies:
                     
                 if year_of_interest == year:
                     ave_life_exp = ave_life_exp + life_exp
+                    # print(details)
+                     
+                    # for i in details[0]:
+                    #     print(details[i])
+                        
                      
                     if life_exp > max_life_exp:
                         max_life_exp = life_exp
