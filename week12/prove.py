@@ -1,133 +1,55 @@
 print()
-# from statistics import mean
-# # Entity, Code, Year, Life expectancy
+i = 0
 
-# inquire = "yes"
+import statistics
 
-# while inquire == "yes":
-#     inquire = ""
+with open("../week11/life-expectancy.csv") as life_expectancies:
+    country_name = input("Type the country: ")
     
+    max_life_exp = 0
+    min_life_exp = 1000
+    average_life_exp = 0
     
-#     i = 0
-#     with open("../week11/life-expectancy.csv") as life_expectancies:
-#         i += 1
-        
-#         country_name = ""
-#         country_largest = 0
-#         country_lowest = 1000
-#         country_average = 0
-#         country = input("Type the country: ")
-#         country_expectancy = input("Type LARGEST OR LOWEST for life expectancy: ")
-#         print()
-        
-#         for details in life_expectancies:
-#             # strip and split
-#             details_strip = details.strip()
-#             details_split = details_strip.split(",") # split              
-            
+    max_life_year = 0
+    min_life_year = 1000
+    average_life_year = 0
     
-inquire = "yes"
-
-while inquire == "yes":
-    inquire = ""
-    with open("../week11/life-expectancy.csv") as life_expectancies:
-        country_name = ""
-        country_largest = 0
-        country_lowest = 1000
-        country_average = 0
-        
-        
-        print()
-        i = 0
-        max_life_expectancy = 0
-        min_life_expectancy = 1000
-        average_life_ecpectancy = 0
-        year_of_interest = int(input("Enter the year of interest: "))
-        country = input("Type the country: ")
-        country_expectancy = input("Type LARGEST OR LOWEST for life expectancy: ")
-        
-        for details in life_expectancies:
+    num_years = 0
+    
+    for details in life_expectancies:
             i += 1
+            
             # strip and split
             details_strip = details.strip()
             details_split = details_strip.split(",") # split
-            # details_split_float = float(details_split[3])
             
             if i > 1:
-                details_split_float = float(details_split[3])
-                details_split_year = int(details_split[2])
-                # print(details_split_year)
+                year = int(details_split[2])
+                life_exp = float(details_split[3])
+                country = details_split[0]
+                code = details_split[1]
                 
-                if details_split_year == year_of_interest:
+                if country.lower() == country_name.lower():
+                    average_life_exp = average_life_exp + life_exp
+                    num_years += 1
+                    average_life_year = year
                     
-                    # print(max(details_split_float))
-                    if details_split_float > max_life_expectancy:
-                        max_life_expectancy = details_split_float
+                    if life_exp > max_life_exp:
+                        max_life_exp = life_exp
+                        max_life_year = year
                 
-                        
-                    elif details_split_float < min_life_expectancy:
-                        min_life_expectancy = details_split_float
-                        # average_life_ecpectancy = average_life_ecpectancy + details_split_float
-                        # average_life_ecpectancy = average_life_ecpectancy / details_split_year
-                        
-            # Highest
-            if country.title() == details_split[0] and country_expectancy.lower() == "largest":
-                
-                for i in range(len(details_split)):
-                    if float(details_split[3]) > country_largest:
-                        country_largest = float(details_split[3])
-                        
-            
-            # Lowest
-            elif country.title() == details_split[0] and country_expectancy.lower() == "lowest":
-                
-                for i in range(len(details_split)):
-                    if float(details_split[3]) < country_lowest:
-                        country_lowest = float(details_split[3])
-                        
-                                            
-        
-        print(f"The overall max life expectancy is: {max_life_expectancy} from {details_split[0]} in {details_split_year}")        
-        
-        print(f"The overall min life expectancy is: {min_life_expectancy} from {details_split[0]} in {details_split_year} \n")
-
-        print(f"For the year {year_of_interest}:")
-        print(f"The average life expectancy across all countries was {average_life_ecpectancy}")
-        print(f"The max life expectancy was in {details_split[0]} with {max_life_expectancy}")
-        print(f"The min life expectancy was in {details_split[0]} with {min_life_expectancy} \n")
-        print(f"Largest years of expectancy: {details_split[2]} - {country_largest}")
-        print(f"Lowest years of expectancy: {details_split[2]} - {country_lowest}")
+                        if life_exp < min_life_exp:
+                            min_life_exp = life_exp
+                            min_life_year = year
+                            
     
-    inquire = input("Do you want to inquire again (yes/no)?")
-    print()
-    
-    
-print("Thank you, for inquiring! \n")
-                        
-                        
-            
-                    
-            
-            
-           
-            
-       
-             
-             
-    
+print()                
+print(f"Name of the country: {country_name.capitalize()}")                    
+print(f"The maximum life expectancy of the country is {max_life_exp} in the year {max_life_year}")
+print(f"The minimum life expectancy of the counntry is {min_life_exp} in the year {min_life_year}")
+print(f"The average of life expectancy of the country is {(average_life_exp / num_years):.2f} in the year {average_life_year}")
+                 
 
 
 
-        
-        
-            
-            
-            
-        
-        
-    
-                
-                
-                
 
-          

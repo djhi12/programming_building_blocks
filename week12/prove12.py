@@ -2,6 +2,7 @@ print()
 i = 0
 num_years = 0
 import statistics
+
 with open("../week11/life-expectancy.csv") as life_expectancies:
     year_of_interest = int(input("Enter the year of interest: "))
     
@@ -58,9 +59,9 @@ print(f"The overall min life expectancy is: {min_life_all_exp} from {min_life_al
 
 print(f"For the year {year_of_interest}:")
 print(f"The average life expectancy across all the countries was {(ave_life_exp / num_years):.2f}")
-print(f"The max life expectancy was in {max_life_country} with {max_life_exp}")
+print(f"The max life expectancy was in {max_life_country} with {max_life_exp:.2f}")
 print(f"The min life expectancy was in {min_life_country} with {min_life_exp}")
+print()
 
-# print(statistics.mean(ave_life_exp))
-# print(len(life_exp))
+
 
