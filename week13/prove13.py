@@ -1,30 +1,35 @@
 print()
 # Wind Chill Calculations 
 
-# Wind Chill
-# Fahrenheit to Celcius = C = 5/9 (F - 32)
-# Celcius to Fahrenheit = F = C (9 / 5) + 32
+# Wind Chill (ºF) = 35.74 + 0.6215 * T - 35.75 * (V ** 0.16) + 0.4275 * T *(V0.16)
+# Where,T= Air Temperature (ºF) V= Wind Speed (mph)
+
+# Celcius = C = 5/9 (F - 32)
+# Fahrenheit = F = C (9 / 5) + 32
 
 # Wind Chill
 def wind_chill(temp, wind_speed=0):
-    return (35.74 + 0.6215 * temp) - (35.75 * wind_speed ** 0.16) + (0.4275 * wind_speed ** 0.16)
+    # return (35.74 + 0.6215 * temp) - (35.75 * wind_speed ** 0.16) + (0.4275 * wind_speed ** 0.16)
+    return (35.74 + 0.6215) * temp - 35.75 * (wind_speed ** 0.16) + 0.4275 * (temp * (wind_speed ** 0.16))
 
       
 # Fahrenheit
 def fahrenheit(temp):
-    return temp * (9 / 5) + 32
+    return temp
+    
 
 # Celcius
 def celcius(temp):
-    return 5/ 9 * (temp - 32)
+    return temp * (9 / 5) + 32
 
 
+# Compute temp
 def temp_compute(temp_type, value1):
     temperature = -1
     
-    if temp_type == "F":
+    if temp_type.upper() == "F":
         temperature = fahrenheit(value1)
-    elif temp_type == "C":
+    elif temp_type.upper() == "C":
         temperature = celcius(value1)
         
     return temperature
@@ -33,18 +38,32 @@ def temp_compute(temp_type, value1):
 # Main program
 temp_type = ""
 
-while temp_type != "":
+while temp_type != "QUIT":
     temp_num = float(input("What is the temperature? "))
     temp_type = input("Fahrenheit or Celcius (F/C)? ")
     
-    temp_type.upper()
+    
+    temp_type = temp_type.upper()
     
     if temp_type == "F":
         temperature = temp_compute(temp_type, temp_num)
-        print(temperature)
+        wind_speed = 0
+        for i in range(12):
+            wind_speed = wind_speed + 5
+            
+            # print(temperature)
+            print(f"At temperature {temperature}F, and the wind speed {wind_speed} mph, the windchill is: {wind_chill(temp_num, wind_speed)}F")
     elif temp_type == "C":
         temperature = temp_compute(temp_type, temp_num)
-        print(temperature)
+        wind_speed = 0
+        for i in range(12):
+            wind_speed = wind_speed + 5
+            
+            # print(temperature)
+            print(f"At temperature {temperature}F, and the wind speed {wind_speed} mph, the windchill is: {wind_chill(temp_num, wind_speed)}F")
+        
+        
+    
         
     
 
