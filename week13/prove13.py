@@ -8,9 +8,9 @@ print()
 # Fahrenheit = F = C (9 / 5) + 32
 
 # Wind Chill
-def wind_chill(temp, wind_speed=0):
+def wind_chill(air_temp, wind_speed):
     # return (35.74 + 0.6215 * temp) - (35.75 * wind_speed ** 0.16) + (0.4275 * wind_speed ** 0.16)
-    return (35.74 + 0.6215) * temp - 35.75 * (wind_speed ** 0.16) + 0.4275 * (temp * (wind_speed ** 0.16))
+    return 35.74 + (0.6215 * air_temp) - (35.75 * wind_speed**0.16) + (0.4275 * air_temp * wind_speed**0.16)
 
       
 # Fahrenheit
@@ -48,21 +48,29 @@ while temp_type != "QUIT":
     if temp_type == "F":
         temperature = temp_compute(temp_type, temp_num)
         wind_speed = 0
+        air_temp = 0
+        
         for i in range(12):
             wind_speed = wind_speed + 5
+            # air_temp = air_temp + 5
             
             # print(temperature)
             print(f"At temperature {temperature}F, and the wind speed {wind_speed} mph, the windchill is: {wind_chill(temp_num, wind_speed)}F")
+            
     elif temp_type == "C":
         temperature = temp_compute(temp_type, temp_num)
         wind_speed = 0
+        air_temp = 0
+        
         for i in range(12):
-            wind_speed = wind_speed + 5
+            wind_speed = wind_speed - 10
+            air_temp = air_temp - 10
             
             # print(temperature)
-            print(f"At temperature {temperature}F, and the wind speed {wind_speed} mph, the windchill is: {wind_chill(temp_num, wind_speed)}F")
+            print(f"At temperature {temperature}F, and the wind speed {wind_speed} mph, the windchill is: {wind_chill(air_temp, wind_speed)}F")
         
         
+
     
         
     
