@@ -60,14 +60,16 @@ while temp_type != "QUIT":
     elif temp_type == "C":
         temperature = temp_compute(temp_type, temp_num)
         wind_speed = 0
-        air_temp = 0
+        air_temp = 14
+       
         
         for i in range(12):
-            wind_speed = wind_speed - 10
-            air_temp = air_temp - 10
+            wind_speed = wind_speed + 5
+            air_temp = air_temp - 0.001
+       
             
             # print(temperature)
-            print(f"At temperature {temperature}F, and the wind speed {wind_speed} mph, the windchill is: {wind_chill(air_temp, wind_speed)}F")
+            print(f"At temperature {temperature}F, and the wind speed {wind_speed} mph, the windchill is: {wind_chill(air_temp, wind_speed):.2f}F")
         
         
 
