@@ -19,11 +19,10 @@ with open("life-expectancy.csv") as life_expectancies:
     
     highest_expectancy = 0
     
-    # Year of interest
     max_life = 0
     max_place = ""
     max_year = 0
-    
+                
     min_life = 1000
     min_place = ""
     min_year = 0
@@ -53,20 +52,28 @@ with open("life-expectancy.csv") as life_expectancies:
                 highest_year = year
                 
             if year_of_interest == year:
+                # Year of interest
                 # 
-                if life_exp < max_life:
+                if life_exp > max_life:
                     max_life = life_exp
-                    max_year = year
                     max_place = country
+                    max_year = year
+                    
                     
                 if life_exp < min_life:
                     min_life = life_exp
+                    min_place = country
+                    min_year = year
                 
                 
                 
 
 
-# print(f"The overall max life expectancy is: {highest_expectancy} from {highest_country} in {highest_year} ")
-# print(f"The overall min life expectancy is: {lowest_expectancy} from {lowest_country} in {lowest_year} ")
-        
+print(f"The overall max life expectancy is: {highest_expectancy} from {highest_country} in {highest_year} ")
+print(f"The overall min life expectancy is: {lowest_expectancy} from {lowest_country} in {lowest_year} ")
+
+print()
+print(f"For the year {year_of_interest}:")
+print(f"The max life expectancy was in {max_place} with {max_life}")
+print(f"The max life expectancy was in {min_place} with {min_life}")
         

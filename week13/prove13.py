@@ -55,7 +55,7 @@ while temp_type != "QUIT":
             # air_temp = air_temp + 5
             
             # print(temperature)
-            print(f"At temperature {temperature}F, and the wind speed {wind_speed} mph, the windchill is: {wind_chill(temp_num, wind_speed)}F")
+            print(f"At temperature {temperature}F, and the wind speed {wind_speed} mph, the windchill is: {wind_chill(temp_num, wind_speed):.2f}F")
             
     elif temp_type == "C":
         temperature = temp_compute(temp_type, temp_num)
