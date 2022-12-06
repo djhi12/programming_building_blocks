@@ -1,6 +1,6 @@
 print()
 i = 0
-num_years = 0
+# num_years = 0
 import statistics
 
 with open("../week11/life-expectancy.csv") as life_expectancies:
@@ -12,6 +12,7 @@ with open("../week11/life-expectancy.csv") as life_expectancies:
     min_life_all_exp = 1000
     
     ave_life_exp = 0
+    num_years = 0
     
     max_life_country = ""
     min_life_country = ""
@@ -40,9 +41,10 @@ with open("../week11/life-expectancy.csv") as life_expectancies:
                     min_life_all = country
                     
                 if year_of_interest == year:
-                    ave_life_exp = ave_life_exp + life_exp
-                    num_years += 1
+                    ave_life_exp = ave_life_exp + life_exp # 3000
+                    num_years += 1 # 20
                         
+                        # 3000 / 20 = average
                      
                     if life_exp > max_life_exp:
                         max_life_exp = life_exp
