@@ -1,18 +1,27 @@
-def addition_num(num1, num2):
-    add_num = num1 + num2
-    return add_num
-
-def multiply_num(num1, num2):
-    mul_num = num1 * num2
-    return mul_num
-
-def combine_num(addition_num, multiply_num):
-    com_num = addition_num() + multiply_num()
-    print(com_num)
+# def welcome():
+#     return "Hello world"
 
 
-add_num1 = addition_num(4, 5)
-multiply_num1 = (4, 5)
-combine_num(add_num1, multiply_num1)
-    
-    
+# print(welcome())
+
+def add(num1, num2):
+    return num1 + num2
+
+def mul(num1, num2):
+    return num1 * num2
+
+def div(num1, num2):
+    return num1 / num2
+
+def sub(num1, num2):
+    return num1 - num2
+
+
+number1 = int(input("Type the number 1: "))
+number2 = int(input("Type the number 2: "))
+
+print(add(number1, number2))
+print(mul(number1, number2))
+print(div(number1, number2))
+print(sub(number1, number2))
+

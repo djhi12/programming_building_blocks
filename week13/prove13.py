@@ -9,7 +9,6 @@ print()
 
 # Wind Chill
 def wind_chill(air_temp, wind_speed):
-    # return (35.74 + 0.6215 * temp) - (35.75 * wind_speed ** 0.16) + (0.4275 * wind_speed ** 0.16)
     return 35.74 + (0.6215 * air_temp) - (35.75 * wind_speed**0.16) + (0.4275 * air_temp * wind_speed**0.16)
 
       
