@@ -1,7 +1,6 @@
 print()
 # Wind Chill Calculations 
 
-# Wind Chill (ºF) = 35.74 + 0.6215 * T - 35.75 * (V ** 0.16) + 0.4275 * T *(V0.16)
 # Where,T= Air Temperature (ºF) V= Wind Speed (mph)
 
 # Celcius = C = 5/9 (F - 32)
@@ -11,18 +10,12 @@ print()
 def wind_chill(air_temp, wind_speed):
     return 35.74 + (0.6215 * air_temp) - (35.75 * wind_speed**0.16) + (0.4275 * air_temp * wind_speed**0.16)
 
-      
-# Fahrenheit
 def fahrenheit(temp):
     return temp
     
-
-# Celcius
 def celcius(temp):
     return temp * (9 / 5) + 32
 
-
-# Compute temp
 def temp_compute(temp_type, value1):
     temperature = -1
     
